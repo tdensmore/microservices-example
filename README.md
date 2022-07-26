@@ -15,7 +15,7 @@ The application itseld is a simple TODO list that additionally authenticates use
 
 ## Service Diagram
 
-Here are the components that comprose this microservice application.
+Here are the components that comprise this microservice application:
 
 ```mermaid
   flowchart LR;
@@ -28,12 +28,12 @@ Here are the components that comprose this microservice application.
     style Redis fill:#7B1FA2,stroke:#CE93D8,stroke-width:4px,color:#fff
     style LogProcessor fill:#388E3C,stroke:#66BB6A,stroke-width:4px,color:#fff
 
-    WebUI([WebUI\nvue.js])
+    WebUI(["WebUI\n(vue.js)"])
     Redis[(Redis)]
-    AuthAPI[[AuthAPI\ngolang]]
-    TodoAPI[[TodoAPI\nnode.js]]
-    UserAPI[[UserAPI\njava]]
-    LogProcessor{{LogProcessor\npython}}
+    AuthAPI[["AuthAPI\n(golang)"]]
+    TodoAPI[["TodoAPI\n(node.js)"]]
+    UserAPI[["UserAPI\n(java)"]]
+    LogProcessor{{"LogProcessor\n(python)"}}
 
       WebUI-->|login|AuthAPI;
       AuthAPI-->|GET username|UserAPI;
